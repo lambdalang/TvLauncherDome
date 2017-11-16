@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/dlg_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/vod_filtrate_category_bg">
+
+            <ImageView
+                android:id="@+id/live_top_arrow_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@mipmap/list_arrow_top" />
+
+            <ImageView
+                android:id="@+id/live_bottom_arrow_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:src="@mipmap/list_arrow_bottom" />
+
+            <view.CatiptvListView
+                android:id="@+id/tv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/live_bottom_arrow_img"
+                android:layout_below="@+id/live_top_arrow_img"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:cacheColorHint="#00ffffff"
+                android:fadeScrollbars="false"
+                android:fastScrollEnabled="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:listSelector="@color/transparent"
+                android:nextFocusUp="@+id/main_tv_lin"
+                android:scrollbars="none"
+                android:scrollbarSize="15dp"
+                android:scrollbarStyle="outsideInset"></view.CatiptvListView>
+            <!--android:nextFocusRight="@+id/tv_grid"-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/live_title_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/list_arrow_left" />
+
+                <TextView
+                    android:id="@+id/live_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="STANDARD PACKAGE"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/live_title_lin">
+
+                <GridView
+                    android:id="@+id/tv_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:cacheColorHint="#00ffffff"
+                    android:fadeScrollbars="true"
+                    android:fastScrollEnabled="true"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@color/transparent"
+                    android:nextFocusLeft="@+id/tv_list"
+                    android:nextFocusUp="@+id/tv_grid"
+                    android:numColumns="5"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp"></GridView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <view.FlyBorderView
+        android:id="@+id/flyBorder_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/item_focus_frame"
+        android:visibility="invisible" />
+</RelativeLayout>

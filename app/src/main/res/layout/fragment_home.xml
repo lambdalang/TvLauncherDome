@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <view.MainLayout
+        android:id="@+id/main_layout"
+        android:layout_below="@+id/home_title_rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/tv_marginleft"
+            android:layout_marginTop="@dimen/tv_margintop"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_move" />
+        </view.ShadowFrameLayout>
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_myapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/frame_tv"
+            android:layout_toRightOf="@+id/frame_tv"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_myapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_myapp" />
+        </view.ShadowFrameLayout>
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame_myapp"
+            android:layout_toRightOf="@+id/frame_tv"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_center" />
+        </view.ShadowFrameLayout>
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame_center"
+            android:layout_toRightOf="@+id/frame_tv"
+            android:layout_marginBottom="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_setting" />
+        </view.ShadowFrameLayout>
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/frame_tv"
+            android:layout_below="@+id/frame_tv"
+            android:layout_toLeftOf="@+id/frame_movie"
+            android:layout_marginBottom="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_live" />
+        </view.ShadowFrameLayout>
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_vod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame_tv"
+            android:layout_toRightOf="@+id/frame_live"
+            android:layout_marginBottom="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_vod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_vod" />
+        </view.ShadowFrameLayout>
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_app1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/frame_myapp"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/frame_myapp"
+            android:layout_marginRight="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_app1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_app1" />
+
+        </view.ShadowFrameLayout>
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_app2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/frame_center"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/frame_center"
+            android:layout_marginRight="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_app2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_app2" />
+
+        </view.ShadowFrameLayout>
+
+        <view.ShadowFrameLayout
+            android:id="@+id/frame_app3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/frame_setting"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/frame_setting"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/imageview_app3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_app3" />
+        </view.ShadowFrameLayout>
+    </view.MainLayout>
+
+    <view.FlyBorderView
+        android:id="@+id/flyBorder_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/item_focus_frame"
+        android:visibility="visible"
+        />
+</RelativeLayout>
